@@ -1,5 +1,8 @@
 <template>
-<h1>this will be a gallery</h1>
+<div id="gallery">
+  this will be a gallery
+
+</div>
 </template>
 
 <script>

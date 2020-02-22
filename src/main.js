@@ -3,14 +3,15 @@ import VueRouter from 'vue-router'
 import App from './App.vue'
 import home from './components/Home.vue'
 import start from './components/Start.vue'
-
+import references from './components/References.vue'
 
 Vue.use(VueRouter)
 Vue.config.productionTip = false
 
 const routes =  [  
     {path: "/", component: start},
-    {path: "/work", component: home}
+    {path: "/work", component: home},
+    {path: "/references", component: references}
   ]
 
 const router = new VueRouter({

@@ -14,7 +14,7 @@
               <router-link to="/work" id="first">I do everything</router-link>
               <a>visual</a>
               <a>event</a>
-              <a>references</a> 
+              <router-link to="/references">references</router-link> 
           </div>
       </div>
       <div id="rightbox">
@@ -36,6 +36,7 @@ export default {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        margin-bottom: 5%;
     }
 
     #rotatinggif{
