@@ -12,14 +12,14 @@
           </div>
           <div id="btm_btns">
               <router-link to="/work" id="first">I do everything</router-link>
-              <a>visual</a>
+              <router-link to="/work">visual</router-link>
               <a>event</a>
               <router-link to="/references">references</router-link> 
           </div>
       </div>
       <div id="rightbox">
-          <a>contact</a>
-          <a>artworks</a>
+          <router-link to="/work">contact</router-link>
+          <router-link to="/work">artworks</router-link>
       </div>
   </div>
 </template>
@@ -37,6 +37,8 @@ export default {
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 5%;
+        position: sticky;
+        top: 0;
     }
 
     #rotatinggif{
@@ -52,11 +54,14 @@ export default {
         color: #FFF;
         margin-top: 2px;
         margin-bottom: 8px;
-        margin-left: 8px;
+        margin-left: 11px;
         font-size: 1.5vw;
         cursor: pointer;
         font-family: inherit;
         text-decoration: none;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
     }
 
     a:hover{
@@ -99,5 +104,63 @@ export default {
     #rightbox{
         display:flex;
         flex-direction: column;
+    }
+ 
+    @media all and (orientation:portrait){
+        #header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            position: relative;
+        }
+
+        #leftbox{
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        a{
+            font-size: 3em;
+            margin: 0;
+            margin-bottom:2%    
+        }
+
+        #btm_btns{
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+        }
+
+        #first{
+            visibility: hidden;
+        }
+
+        #gifbox{
+            width: 100%;
+            align-items: center;
+        }
+
+        #gifbox img{
+            width: 100%
+        }
+
+        #rotatinggif{
+            width: 60%;
+        }
+
+        #constructionbox{
+            display: flex;
+            flex-direction: row;
+            width: 100%
+        }
+
+        #rightbox{
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            flex-direction: row;
+        }
     }
 </style>

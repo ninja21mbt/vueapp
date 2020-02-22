@@ -39,4 +39,26 @@ export default {
        font-size: 3vw;
    }
 
+    @media all and (orientation:portrait){
+        #body{
+            width: 100%;
+            align-items: center;
+        }
+
+        #refcontainer{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 0.8em;
+            margin-top: 5%;
+            margin-bottom: 20%;
+        }
+
+        span{
+            width: 100%;
+            text-align: center;
+            margin: 2%;
+        }
+    }
+
 </style>
