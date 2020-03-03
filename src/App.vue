@@ -25,7 +25,7 @@ body{
 }
 
 #app {
-  font-family: serif;
+  font-family: 'Muli', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #FFF;

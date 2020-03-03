@@ -2,7 +2,7 @@
   <div id="body">
     <Header />
     <div id="refcontainer">
-      <span v-for="(e, idx) in RefData" :key="idx">{{e.date +'-' + e.location +'/'+ e.work}}</span>
+      <span v-for="(e, idx) in RefData" :key="idx">{{e.date +' - ' + e.location +' / '+ e.work}}</span>
     </div>
   </div>
 </template>

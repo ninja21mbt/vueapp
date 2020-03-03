@@ -11,14 +11,14 @@
         <img src="../assets/headerassets/visual.gif" />
       </div>
       <div id="btm_btns">
-        <router-link to="/work" id="first">I do everything</router-link>
-        <router-link to="/work">visual</router-link>
-        <a>event</a>
-        <router-link to="/references">references</router-link>
+        <router-link to="/work">I do everything</router-link>
+        <router-link to="/motion">Visual</router-link>
+        <router-link to="/work">Event</router-link>
+        <router-link to="/references">References</router-link>
       </div>
     </div>
     <div id="rightbox">
-      <router-link to="/work">contact</router-link>
+      <router-link to="/contact">contact</router-link>
       <router-link to="/work">artworks</router-link>
     </div>
   </div>
@@ -32,11 +32,12 @@ export default {
 
 <style scoped>
 #header {
-  width: 80%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
+  margin-top: 2%;
   position: sticky;
   top: 0;
 }
@@ -49,24 +50,32 @@ export default {
 a {
   box-shadow: 0px 0px 0px transparent;
   text-shadow: 0px 0px 0px transparent;
-  border: 4px solid #fff;
+  border: 2px solid #fff;
   background-color: black;
   color: #fff;
   margin-top: 2px;
   margin-bottom: 8px;
   margin-left: 11px;
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   cursor: pointer;
   font-family: inherit;
   text-decoration: none;
-  padding-left: 5px;
-  padding-right: 5px;
   text-align: center;
+  width: 100%;
+  padding-top: 0.17em;
+  padding-bottom: 0.17em;
 }
 
 a:hover {
   border-color: darkgrey;
   transition-duration: 0.5s;
+}
+
+#btm_btns {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
 
 /*-- left box --*/
@@ -88,16 +97,6 @@ a:hover {
 
 #gifbox img {
   width: 50%;
-}
-
-#btm_btns {
-  width: 100%;
-}
-
-#first {
-  padding-left: 15%;
-  padding-right: 15%;
-  margin-right: 5%;
 }
 
 /*-- right box --*/
