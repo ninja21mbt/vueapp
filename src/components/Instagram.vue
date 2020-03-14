@@ -21,7 +21,7 @@ export default {
 
 <style scoped>
 #body {
-  width: 100%;
+  width: 98%;
   display: flex;
   align-items: center;
   flex-direction: column;

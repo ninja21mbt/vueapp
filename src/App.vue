@@ -31,6 +31,7 @@ body{
   color: #FFF;
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 </style>
