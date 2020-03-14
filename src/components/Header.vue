@@ -32,14 +32,17 @@ export default {
 
 <style scoped>
 #header {
-  width: 90%;
+  width: 95%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 3%;
   margin-top: 2%;
+  padding: 0% 5% 0% 5%;
   position: sticky;
   top: 0;
+  background-color: black;
+  box-shadow: 0 10px 2px -2px black;
 }
 
 #rotatinggif {
