@@ -30,9 +30,9 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 #header {
-  width: 95%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -43,126 +43,123 @@ export default {
   top: 0;
   background-color: black;
   box-shadow: 0 10px 2px -2px black;
+
+  #rotatinggif {
+    width: 18%;
+  }
+  a {
+    box-shadow: 0px 0px 0px transparent;
+    text-shadow: 0px 0px 0px transparent;
+    border: 2px solid #fff;
+    background-color: black;
+    color: #fff;
+    margin-top: 2px;
+    margin-bottom: 8px;
+    margin-left: 11px;
+    font-size: 1.2vw;
+    cursor: pointer;
+    font-family: inherit;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    padding-top: 0.17em;
+    padding-bottom: 0.17em;
+
+    :hover {
+      border-color: darkgrey;
+      transition-duration: 0.5s;
+    }
+  }
+  #leftbox {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+    #constructionbox {
+      img {
+        width: 50%;
+      }
+    }
+    #gifbox {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+
+      img {
+        width: 50%;
+      }
+    }
+    #btm_btns {
+      width: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+    }
+  }
+  #rightbox {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-#rotatinggif {
-  width: 18%;
-}
+@media only screen and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 
-/*-- buttons --*/
-a {
-  box-shadow: 0px 0px 0px transparent;
-  text-shadow: 0px 0px 0px transparent;
-  border: 2px solid #fff;
-  background-color: black;
-  color: #fff;
-  margin-top: 2px;
-  margin-bottom: 8px;
-  margin-left: 11px;
-  font-size: 1.2vw;
-  cursor: pointer;
-  font-family: inherit;
-  text-decoration: none;
-  text-align: center;
-  width: 100%;
-  padding-top: 0.17em;
-  padding-bottom: 0.17em;
-}
-
-a:hover {
-  border-color: darkgrey;
-  transition-duration: 0.5s;
-}
-
-#btm_btns {
-  width: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-}
-
-/*-- left box --*/
-#leftbox {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
-
-#constructionbox img {
-  width: 50%;
-}
-
-#gifbox {
-  display: flex;
-  align-items: flex-end;
-  flex-direction: column;
-}
-
-#gifbox img {
-  width: 50%;
-}
-
-/*-- right box --*/
-#rightbox {
-  display: flex;
-  flex-direction: column;
-}
-
-@media all and (orientation: portrait) {
   #header {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     position: relative;
-  }
 
-  #leftbox {
-    display: flex;
-    align-items: center;
-    width: 100%;
-  }
+    #rotatinggif {
+      width: 60%;
+    }
 
-  a {
-    font-size: 3em;
-    margin: 0;
-    margin-bottom: 2%;
-  }
+    a {
+      font-size: 3em;
+      margin: 0;
+      margin-bottom: 2%;
+    }
 
-  #btm_btns {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-  }
+    #leftbox {
+      display: flex;
+      align-items: center;
+      width: 100%;
 
-  #first {
-    visibility: hidden;
-  }
+      #constructionbox {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+      }
 
-  #gifbox {
-    width: 100%;
-    align-items: center;
-  }
+      #gifbox {
+        width: 100%;
+        align-items: center;
 
-  #gifbox img {
-    width: 100%;
-  }
+        img {
+          width: 100%;
+        }
+      }
+      #first {
+        visibility: hidden;
+      }
+      #btm_btns {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+      }
+    }
+    #rightbox {
+      position: fixed;
+      bottom: 0;
+      display: flex;
+      flex-direction: row;
 
-  #rotatinggif {
-    width: 60%;
-  }
-
-  #constructionbox {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-  }
-
-  #rightbox {
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    flex-direction: row;
+      a{
+        margin: 0 0.2em 0 0.2em;
+        padding: 0.2em;
+      }
+    }
   }
 }
 </style>

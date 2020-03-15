@@ -7,33 +7,45 @@
     </div>
     <div class="column">
       <img src="../assets/homeassets/homecontent/97nike.gif" />
-       <img src="../assets/homeassets/homecontent/97nike.gif" />
+      <img src="../assets/homeassets/homecontent/97nike.gif" />
     </div>
     <div class="column">
-      <img v-for="(src, idx) in Sources" :key="idx" :src="src" alt="image or gif" />
+      <img v-for="(src, idx) in imgs" :key="idx" :src="src" alt="image or gif" />
     </div>
     <div class="column">
       <img src="../assets/homeassets/homecontent/97nike.gif" />
-       <img src="../assets/homeassets/homecontent/97nike.gif" />
+      <img src="../assets/homeassets/homecontent/97nike.gif" />
     </div>
   </div>
 </template>
 
-<script>
-import Sources from "../assets/homeassets/homesrc.json";
+<!-- <script> -->
 
-export default {
-  name: "Gallery",
-  data: () => {
-    return {
-      // srcPath: require('@/assets/homeassets/homecontent/'),
-      Sources
-    };
-  }
-};
-</script>
+// export default {
+//   name: "Gallery",
+//   data: () => {
+//     fetch(
+//       `https://7vhmrxsuy0.execute-api.eu-central-1.amazonaws.com/prod`
+//     ).then((resp) => {
 
-<style scoped>
+//     })
+//     let imgs = await response.json();
+//     return imgs;
+//   },
+//   mounted () {
+//     fetch(
+//       "https://7vhmrxsuy0.execute-api.eu-central-1.amazonaws.com/prod"
+//     ).then(
+//       response => {this.results = response.data.json()}
+//     ).then(
+//       return 
+//     )
+//   }
+//   }
+// };
+<!-- </script> -->
+
+<style lang='scss' scoped>
 h1 {
   color: white;
 }
@@ -44,15 +56,32 @@ h1 {
   flex-wrap: wrap;
   width: 100%;
   padding: 5px;
+
+  .column {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 100%;
+      animation-iteration-count: infinite;
+    }
+  }
 }
 
-.column {
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-}
+@media only screen and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  #gallery {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 5px;
 
-img{
-  width: 100%;
+    .column {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
 </style>

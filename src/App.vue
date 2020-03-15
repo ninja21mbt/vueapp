@@ -29,9 +29,6 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #FFF;
-  display: flex;
-  justify-content: center;
-  overflow-x: hidden;
 }
 
 </style>

@@ -24,40 +24,45 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 #body {
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
+    
+  #refcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3vw;
+    margin-bottom: 2em;
+  }
 }
 
-#refcontainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 3vw;
-}
-
-@media all and (orientation: portrait) {
+// fontsize anpassen:
+@media only screen 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) 
+  and (orientation: portrait) { 
   #body {
     width: 100%;
     align-items: center;
-  }
 
   #refcontainer {
     width: 100%;
     display: flex;
     align-items: center;
-    font-size: 0.8em;
+    font-size: 2em;
     margin-top: 5%;
     margin-bottom: 20%;
   }
 
-  span {
-    width: 100%;
-    text-align: center;
-    margin: 2%;
+    span {
+      width: 100%;
+      text-align: center;
+      margin: 2%;
+    }
   }
 }
 </style>

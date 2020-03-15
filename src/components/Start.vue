@@ -1,8 +1,12 @@
 <template>
   <div>
-    <div id="box1">
+    <div id="box1" ref="box">
       <router-link to="/work" id="linkfield">
-        <img src="../assets/startassets/lexspace.gif" />
+        <img
+          src="../assets/startassets/lexspace.gif"
+          v-on:mouseover="removeFilter"
+          v-on:mouseout="addFilter"
+        />
       </router-link>
     </div>
     <div id="box2"></div>
@@ -11,11 +15,26 @@
 
 <script>
 export default {
-  name: "Start"
+  name: "Start",
+
+  methods: {
+    removeFilter: function(event) {
+      if (event) {
+        let el = this.$refs.box;
+        el.style.setProperty("filter", "none");
+      }
+    },
+    addFilter: function(event) {
+      if (event) {
+        let el = this.$refs.box;
+        el.style.setProperty("filter", "invert(100%)");
+      }
+    }
+  }
 };
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
 /* first background image */
 #box1 {
   width: 100vw;
@@ -27,30 +46,30 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
+  &:hover {
+    filter: invert(100%);
+    transition-duration: 0.3s;
+  }
 
-#box1:hover {
-  filter: invert(100%);
-  transition-duration: 0.3s;
-}
+  /* middle part */
+  #linkfield {
+    width: 36%;
+    height: 60%;
+    margin-top: 10%;
+    margin-left: 4%;
+    cursor: pointer;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
 
-/* middle part, clickable */
-#linkfield {
-  width: 36%;
-  height: 60%;
-  margin-top: 10%;
-  margin-left: 4%;
-  cursor: pointer;
-  z-index: 100;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  flex-direction: column;
-}
-
-#linkfield img {
-  width: 130%;
+    /* middle part, clickable */
+    img {
+      width: 130%;
+    }
+  }
 }
 
 /* bottom Background image */
@@ -61,11 +80,10 @@ export default {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-}
 
-#box2:hover {
-  filter: invert(100%);
-  transition-duration: 0.3s;
-  cursor: pointer;
+  &:hover {
+    filter: invert(100%);
+    transition-duration: 0.3s;
+  }
 }
 </style>
