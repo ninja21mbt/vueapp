@@ -1,49 +1,39 @@
 <template>
   <div id="gallery">
     <div class="column">
-      <img
-        src="../assets/homeassets/homecontent/52f2de_624c180b79da4b34b8a41cf255e93d2e_mv2_d_3454_5181_s_4_2.webp"
-      />
-    </div>
-    <div class="column">
-      <img src="../assets/homeassets/homecontent/97nike.gif" />
-      <img src="../assets/homeassets/homecontent/97nike.gif" />
+      <img v-for="(src, idx) in imgs" :key="idx" :src="src" alt="image or gif" />
     </div>
     <div class="column">
       <img v-for="(src, idx) in imgs" :key="idx" :src="src" alt="image or gif" />
     </div>
     <div class="column">
-      <img src="../assets/homeassets/homecontent/97nike.gif" />
-      <img src="../assets/homeassets/homecontent/97nike.gif" />
+      <img v-for="(src, idx) in imgs" :key="idx" :src="src" alt="image or gif" />
+    </div>
+    <div class="column">
+     <img v-for="(src, idx) in imgs" :key="idx" :src="src" alt="image or gif" /> 
     </div>
   </div>
 </template>
 
-<!-- <script> -->
+<script> 
 
-// export default {
-//   name: "Gallery",
-//   data: () => {
-//     fetch(
-//       `https://7vhmrxsuy0.execute-api.eu-central-1.amazonaws.com/prod`
-//     ).then((resp) => {
+export default {
+  name: "Gallery",
 
-//     })
-//     let imgs = await response.json();
-//     return imgs;
-//   },
-//   mounted () {
-//     fetch(
-//       "https://7vhmrxsuy0.execute-api.eu-central-1.amazonaws.com/prod"
-//     ).then(
-//       response => {this.results = response.data.json()}
-//     ).then(
-//       return 
-//     )
-//   }
-//   }
-// };
-<!-- </script> -->
+
+data: () => {
+    return {
+      imgs: null
+    }
+  },
+  mounted () {
+    fetch('https://7vhmrxsuy0.execute-api.eu-central-1.amazonaws.com/prod')
+      .then(response => response.json())
+      .then(data => this.imgs = data.urls)
+  }
+}
+
+</script>
 
 <style lang='scss' scoped>
 h1 {
