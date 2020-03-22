@@ -9,9 +9,9 @@
     <div class="column">
       <img v-for="(src, idx) in col3" :key="idx" :src="src" alt="image or gif" />
     </div>
-    <div class="column">
+    <!-- <div class="column">
       <img v-for="(src, idx) in col4" :key="idx" :src="src" alt="image or gif" />
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -25,7 +25,7 @@ export default {
       col1: [],
       col2: [],
       col3: [],
-      col4: []
+      // col4: []
     };
   },
 
@@ -50,9 +50,9 @@ export default {
           this.col3.push(this.imgs[i3]);
         }
 
-        for (var i4 = 2; i4 < this.imgs.length; i4 = i4 + delta) {
-          this.col4.push(this.imgs[i4]);
-        }
+        // for (var i4 = 2; i4 < this.imgs.length; i4 = i4 + delta) {
+        //   this.col4.push(this.imgs[i4]);
+        // }
       });
   }
 };
@@ -71,12 +71,13 @@ h1 {
   padding: 5px;
 
   .column {
-    width: 25%;
+    width: 33.3%;
     display: flex;
     flex-direction: column;
 
     img {
-      width: 100%;
+      width: 98%;
+      margin: 1%;
       animation-iteration-count: infinite;
     }
   }
