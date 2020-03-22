@@ -35,18 +35,18 @@ export default {
       .then(data => {
         this.imgs = data.urls;
 
-        var maxVal = 5;
-        var delta = Math.floor(this.imgs.length / maxVal);
+        
+        var delta = this.imgs.length;
 
-        for (var i = 0; i < this.imgs.length; i = i + delta) {
+        for (let i = 0; i < this.imgs.length; i ++) {
           this.col1.push(this.imgs[i]);
         }
 
-        for (var i2 = 1; i2 < this.imgs.length; i2 = i2 + delta) {
+        for (let i2 = 1; i2 < this.imgs.length; i2 = i2 + delta) {
           this.col2.push(this.imgs[i2]);
         }
 
-        for (var i3 = 2; i3 < this.imgs.length; i3 = i3 + delta) {
+        for (let i3 = 2; i3 < this.imgs.length; i3 = i3 + delta) {
           this.col3.push(this.imgs[i3]);
         }
 
