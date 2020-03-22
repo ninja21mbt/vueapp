@@ -65,7 +65,7 @@ export default {
     padding-top: 0.17em;
     padding-bottom: 0.17em;
 
-    :hover {
+    &:hover {
       border-color: darkgrey;
       transition-duration: 0.5s;
     }

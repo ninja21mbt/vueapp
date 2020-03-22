@@ -1,38 +1,61 @@
 <template>
   <div id="gallery">
     <div class="column">
-      <img v-for="(src, idx) in imgs" :key="idx" :src="src" alt="image or gif" />
+      <img v-for="(src, idx) in col1" :key="idx" :src="src" alt="image or gif" />
     </div>
     <div class="column">
-      <img v-for="(src, idx) in imgs" :key="idx" :src="src" alt="image or gif" />
+      <img v-for="(src, idx) in col2" :key="idx" :src="src" alt="image or gif" />
     </div>
     <div class="column">
-      <img v-for="(src, idx) in imgs" :key="idx" :src="src" alt="image or gif" />
+      <img v-for="(src, idx) in col3" :key="idx" :src="src" alt="image or gif" />
     </div>
     <div class="column">
-     <img v-for="(src, idx) in imgs" :key="idx" :src="src" alt="image or gif" /> 
+      <img v-for="(src, idx) in col4" :key="idx" :src="src" alt="image or gif" />
     </div>
   </div>
 </template>
 
-<script> 
-
+<script>
 export default {
   name: "Gallery",
 
-
-data: () => {
+  data: () => {
     return {
-      imgs: null
-    }
+      imgs: [],
+      col1: [],
+      col2: [],
+      col3: [],
+      col4: []
+    };
   },
-  mounted () {
-    fetch('https://7vhmrxsuy0.execute-api.eu-central-1.amazonaws.com/prod')
-      .then(response => response.json())
-      .then(data => this.imgs = data.urls)
-  }
-}
 
+  beforeCreate() {
+    fetch("https://7vhmrxsuy0.execute-api.eu-central-1.amazonaws.com/prod")
+      .then(response => response.json())
+      .then(data => {
+        this.imgs = data.urls;
+
+        var maxVal = 5;
+        var delta = Math.floor(this.imgs.length / maxVal);
+
+        for (var i = 0; i < this.imgs.length; i = i + delta) {
+          this.col1.push(this.imgs[i]);
+        }
+
+        for (var i2 = 1; i2 < this.imgs.length; i2 = i2 + delta) {
+          this.col2.push(this.imgs[i2]);
+        }
+
+        for (var i3 = 2; i3 < this.imgs.length; i3 = i3 + delta) {
+          this.col3.push(this.imgs[i3]);
+        }
+
+        for (var i4 = 2; i4 < this.imgs.length; i4 = i4 + delta) {
+          this.col4.push(this.imgs[i4]);
+        }
+      });
+  }
+};
 </script>
 
 <style lang='scss' scoped>
