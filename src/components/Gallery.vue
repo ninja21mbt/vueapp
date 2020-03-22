@@ -9,9 +9,6 @@
     <div class="column">
       <img v-for="(src, idx) in col3" :key="idx" :src="src" alt="image or gif" />
     </div>
-    <!-- <div class="column">
-      <img v-for="(src, idx) in col4" :key="idx" :src="src" alt="image or gif" />
-    </div> -->
   </div>
 </template>
 
@@ -24,7 +21,7 @@ export default {
       imgs: [],
       col1: [],
       col2: [],
-      col3: [],
+      col3: []
       // col4: []
     };
   },
@@ -35,24 +32,27 @@ export default {
       .then(data => {
         this.imgs = data.urls;
 
+        for (let i = 0; i <= this.imgs.length; i++) {
+          if (i % 3 == 0) {
+            this.col1.push(this.imgs[i]);
+          }
+        }
+
+        for (let i2 = 3; i2 <= this.imgs.length; i2++) {
+          if (i2 % 3 == 0) {
+            this.col2.push(this.imgs[i2 + 1]);
+          }
+        }
+
+        for (let i3 = 0; i3 <= this.imgs.length; i3++) {
+          if (i3 % 3 == 0) {
+            this.col3.push(this.imgs[i3 + 2]);
+          }
+        }
         
-        var delta = this.imgs.length;
-
-        for (let i = 0; i < this.imgs.length; i ++) {
-          this.col1.push(this.imgs[i]);
-        }
-
-        for (let i2 = 1; i2 < this.imgs.length; i2 = i2 + delta) {
-          this.col2.push(this.imgs[i2]);
-        }
-
-        for (let i3 = 2; i3 < this.imgs.length; i3 = i3 + delta) {
-          this.col3.push(this.imgs[i3]);
-        }
-
-        // for (var i4 = 2; i4 < this.imgs.length; i4 = i4 + delta) {
-        //   this.col4.push(this.imgs[i4]);
-        // }
+        console.log(this.col1.length);
+        console.log(this.col2.length);
+        console.log(this.col3.length);
       });
   }
 };

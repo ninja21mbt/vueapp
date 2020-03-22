@@ -18,7 +18,6 @@ const routes =  [
     {path: "/references", component: references},
     {path: "/motion", component: visual},
     {path: "/contact", component: contact},
-    {path: "/*", component: FourOhFour},
   ]
 
 const router = new VueRouter({
