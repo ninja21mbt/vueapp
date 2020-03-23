@@ -37,8 +37,7 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 3%;
-  margin-top: 2%;
-  padding: 0% 5% 0% 5%;
+  padding: 2% 5% 0% 5%;
   position: sticky;
   top: 0;
   background-color: black;
@@ -102,7 +101,7 @@ export default {
   }
 }
 
-@media only screen and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+@media only screen  and (orientation: portrait) {
 
   #header {
     display: flex;
