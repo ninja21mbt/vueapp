@@ -101,8 +101,7 @@ export default {
   }
 }
 
-@media only screen  and (orientation: portrait) {
-
+@media only screen and (orientation: portrait) {
   #header {
     display: flex;
     flex-direction: column;
@@ -145,7 +144,9 @@ export default {
       #btm_btns {
         display: flex;
         flex-direction: column;
-        width: 40%;
+        width: 60%;
+        font-size: 0.5em;
+        margin: 10px 0px 5px 0px;
       }
     }
     #rightbox {
@@ -154,9 +155,10 @@ export default {
       display: flex;
       flex-direction: row;
 
-      a{
+      a {
         margin: 0 0.2em 0 0.2em;
         padding: 0.2em;
+        font-size: 1em;
       }
     }
   }
