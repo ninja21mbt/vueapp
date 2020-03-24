@@ -99,6 +99,10 @@ and (orientation: portrait) {
     #linkfield {
     width: 70%;
     height: 60%;
+
+      img{
+        width: 100%;
+      }
     }
 
     #box2{
