@@ -87,30 +87,26 @@ export default {
   }
 }
 
-@media only screen and (max-device-width: 667px) 
-and (-webkit-min-device-pixel-ratio: 2) 
-and (orientation: portrait) {
-    #box1{
-        background-size: cover;
-        background-attachment:initial;
-        height: 100vh;
-    }
+@media only screen and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  #box1 {
+    background-size: cover;
+    background-attachment: initial;
+    height: 100vh;
 
     #linkfield {
-    width: 90%;
-    height: 60%;
+      width: 90%;
+      height: 60%;
 
-      img{
+      img {
         width: 100%;
       }
     }
+  }
 
-    #box2{
-      background-size: cover;
-      height: 100vh;
-      background-attachment:initial;
-
-    }
+  #box2 {
+    background-size: cover;
+    height: 100vh;
+    background-attachment: initial;
+  }
 }
-
 </style>
