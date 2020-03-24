@@ -91,12 +91,11 @@ export default {
 and (-webkit-min-device-pixel-ratio: 2) 
 and (orientation: portrait) {
     #box1{
-        background-size: unset;
         height: 100vh;
     }
 
     #box1{
-        background-size: unset;
+      background-size: auto;
     }
 }
 
