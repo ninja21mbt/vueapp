@@ -94,8 +94,11 @@ and (orientation: portrait) {
         background-size: cover;
         background-attachment:initial;
         height: 100vh;
-
     }
+
+    #linkfield {
+    width: 70%;
+    height: 60%;
 
     #box2{
       background-size: cover;
