@@ -92,13 +92,16 @@ and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: portrait) {
     #box1{
         background-size: cover;
+        background-attachment:initial;
         height: 100vh;
 
     }
 
-    #box1{
+    #box2{
       background-size: cover;
-        height: 100vh;
+      height: 100vh;
+      background-attachment:initial;
+
     }
 }
 
