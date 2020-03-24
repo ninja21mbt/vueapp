@@ -97,7 +97,7 @@ and (orientation: portrait) {
     }
 
     #linkfield {
-    width: 70%;
+    width: 90%;
     height: 60%;
 
       img{
