@@ -99,6 +99,7 @@ and (orientation: portrait) {
     #linkfield {
     width: 70%;
     height: 60%;
+    }
 
     #box2{
       background-size: cover;
