@@ -90,9 +90,12 @@ export default {
 @media only screen and (max-device-width: 667px) 
 and (-webkit-min-device-pixel-ratio: 2) 
 and (orientation: portrait) {
-    #body{
-        max-width: 100vw;
-        height: auto;
+    #box1{
+        background-size: unset;
+    }
+
+    #box1{
+        background-size: unset;
     }
 }
 
