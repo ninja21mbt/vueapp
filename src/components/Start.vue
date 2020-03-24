@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="body">
     <div id="box1" ref="box">
       <router-link to="/work" id="linkfield">
         <img
@@ -86,4 +86,14 @@ export default {
     transition-duration: 0.3s;
   }
 }
+
+@media only screen and (max-device-width: 667px) 
+and (-webkit-min-device-pixel-ratio: 2) 
+and (orientation: portrait) {
+    #body{
+        max-width: 100vw;
+        height: auto;
+    }
+}
+
 </style>
