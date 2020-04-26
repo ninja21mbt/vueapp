@@ -9,7 +9,6 @@
         />
       </router-link>
     </div>
-    <div id="box2"></div>
   </div>
 </template>
 
@@ -72,21 +71,6 @@ export default {
   }
 }
 
-/* bottom Background image */
-#box2 {
-  width: 100vw;
-  height: 100vh;
-  background-image: url("../assets/startassets/startimg2.png");
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-
-  &:hover {
-    filter: invert(100%);
-    transition-duration: 0.3s;
-  }
-}
-
 @media only screen and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   #box1 {
     background-size: cover;
@@ -101,12 +85,6 @@ export default {
         width: 100%;
       }
     }
-  }
-
-  #box2 {
-    background-size: cover;
-    height: 100vh;
-    background-attachment: initial;
   }
 }
 </style>
