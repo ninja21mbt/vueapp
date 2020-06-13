@@ -80,8 +80,8 @@ export default {
 
       a {
         box-shadow: 
-        10px 10px 25px black,
-        inset -10px -10px 25px black,
+        10px 10px 25px #0B0C0E,
+        inset -10px -10px 25px #0B0C0E,
         -10px -10px 25px #323439,
         inset 10px 10px 25px #323439;
         background-color: #1b1d23;
@@ -91,6 +91,15 @@ export default {
         text-align: center;
         flex: 1;
         border-radius: 15px;
+
+        &:hover{
+          box-shadow: 
+        10px 10px 25px #323439,
+        inset -10px -10px 25px #323439,
+        -10px -10px 25px #0B0C0E,
+        inset 10px 10px 25px #0B0C0E;
+        transition-duration: 0.3s;
+        }
 
         img {
           height: 15px;
