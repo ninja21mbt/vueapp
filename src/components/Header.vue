@@ -1,6 +1,6 @@
 <template>
   <div id="header">
-    <!-- <img id="rotatinggif" src="../assets/headerassets/headergif_drehend.gif" /> -->
+   
     <div id="rightbox">
       <!-- <div id="constructionbox">
         <img src="../assets/headerassets/underconstruction.gif" />
@@ -12,7 +12,9 @@
       </div> -->
      
     </div>
-     <div id="buttons">
+        <div id="test">
+        <img id="lexgif" src="../assets/headerassets/Lexspace.gif" />
+        <div id="buttons">
         <router-link to="/work">
           <img src="../assets/headerassets/EVERYTHING2.png" alt="button link to everything" />
         </router-link>
@@ -25,6 +27,7 @@
         <router-link to="/references">
           <img src="../assets/headerassets/SHOP2.png" alt="button link to shop" />
         </router-link>
+      </div>
       </div>
   </div>
 </template>
@@ -41,47 +44,61 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 3%;
-  padding: 2% 5% 0% 5%;
+  padding: 0% 5% 0% 5%;
   position: sticky;
   top: 0;
   background-color: #1b1d23;
   box-shadow:       0  12px 15px 0 #0b0d0f,
               inset 0 -10px 15px 0 #0b0d0f;
 
-  #rotatinggif {
-    width: 18%;
-  }
 
-  #rightbox {
-    display: flex;
-    flex-direction: column;
-    margin-top: 5px;
-    width: 80%;
+  // #rightbox {
+  //   display: flex;
+  //   flex-direction: column;
+  //   margin-top: 5px;
+  //   width: 80%;
 
-    #constructionbox {
-      img {
-        width: 50%;
-      }
-    }
-    #gifbox {
-      display: flex;
-      align-items: flex-end;
-      flex-direction: column;
+  //   #constructionbox {
+  //     img {
+  //       width: 50%;
+  //     }
+  //   }
+  //   #gifbox {
+  //     display: flex;
+  //     align-items: flex-end;
+  //     flex-direction: column;
 
-      img {
-        width: 30%;
-      }
-    }
+  //     img {
+  //       width: 30%;
+  //     }
+  //   }
     
+  // }
+
+  #test{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    #lexgif{
+      width: 300px;
+    }
   }
+
   #buttons {
       width: 100%;
       display: flex;
       flex-flow: row nowrap;
       justify-content: center;
-      align-content: center;
+      align-items: center;
       margin-bottom: 30px;
+      margin-top: 30px;
+
+      #lexgif{
+        width: 300px;
+        padding-bottom: 2px;
+      }
 
       a {
         box-shadow: 
