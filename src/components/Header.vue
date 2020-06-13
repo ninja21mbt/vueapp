@@ -41,7 +41,7 @@ export default {
   position: sticky;
   top: 0;
   background-color: #1B1D23;
-  box-shadow: 0 15px 15px 0 black;
+  box-shadow: 0 15px 15px 0 #0b0d0f;
 
   #rotatinggif {
     width: 18%;
