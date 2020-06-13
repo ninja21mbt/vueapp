@@ -1,7 +1,7 @@
 <template>
   <div id="header">
     <img id="rotatinggif" src="../assets/headerassets/headergif_drehend.gif" />
-    <div id="leftbox">
+    <div id="rightbox">
       <div id="constructionbox">
         <img src="../assets/headerassets/underconstruction.gif" />
         <img src="../assets/headerassets/underconstruction.gif" />
@@ -10,16 +10,20 @@
         <img src="../assets/headerassets/nothingisperfect.gif" />
         <img src="../assets/headerassets/visual.gif" />
       </div>
-      <div id="btm_btns">
-        <router-link to="/work">I do everything</router-link>
-        <router-link to="/motion">Visual</router-link>
-        <router-link to="/work">Event</router-link>
-        <router-link to="/references">References</router-link>
+      <div id="buttons">
+        <router-link to="/work">
+          <img src="../assets/headerassets/EVERYTHING.png" alt="button link to everything" />
+        </router-link>
+        <router-link to="/motion">
+          <img src="../assets/headerassets/CASES.png" alt="button link to cases" />
+        </router-link>
+        <router-link to="/work">
+          <img src="../assets/headerassets/ME.png" alt="button link to me" />
+        </router-link>
+        <router-link to="/references">
+          <img src="../assets/headerassets/SHOP.png" alt="button link to shop" />
+        </router-link>
       </div>
-    </div>
-    <div id="rightbox">
-      <router-link to="/contact">contact</router-link>
-      <router-link to="/work">artworks</router-link>
     </div>
   </div>
 </template>
@@ -40,39 +44,18 @@ export default {
   padding: 2% 5% 0% 5%;
   position: sticky;
   top: 0;
-  background-color: #1B1D23;
+  background-color: #1b1d23;
   box-shadow: 0 15px 15px 0 #0b0d0f;
 
   #rotatinggif {
     width: 18%;
   }
-  a {
-    box-shadow: 0px 0px 0px transparent;
-    text-shadow: 0px 0px 0px transparent;
-    border: 2px solid #fff;
-    background-color: #1B1D23;
-    color: #fff;
-    margin-top: 2px;
-    margin-bottom: 8px;
-    margin-left: 11px;
-    font-size: 1.2vw;
-    cursor: pointer;
-    font-family: inherit;
-    text-decoration: none;
-    text-align: center;
-    width: 100%;
-    padding-top: 0.17em;
-    padding-bottom: 0.17em;
 
-    &:hover {
-      border-color: darkgrey;
-      transition-duration: 0.5s;
-    }
-  }
-  #leftbox {
+  #rightbox {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 5px;
+    width: 80%;
 
     #constructionbox {
       img {
@@ -85,19 +68,40 @@ export default {
       flex-direction: column;
 
       img {
-        width: 50%;
+        width: 30%;
       }
     }
-    #btm_btns {
+    #buttons {
       width: 100%;
       display: flex;
       flex-flow: row nowrap;
-      justify-content: space-between;
+      justify-content: center;
+      align-content: center;
+
+      a {
+        box-shadow: 
+        10px 10px 25px black,
+        inset -10px -10px 25px black,
+        -10px -10px 25px #323439,
+        inset 10px 10px 25px #323439;
+        background-color: #1b1d23;
+        margin: 15px;
+        font-size: 1.2vw;
+        cursor: pointer;
+        text-align: center;
+        flex: 1;
+        border-radius: 15px;
+
+        img {
+          height: 15px;
+          padding: 10px;
+        }
+
+        &:first-child {
+          flex: 2;
+        }
+      }
     }
-  }
-  #rightbox {
-    display: flex;
-    flex-direction: column;
   }
 }
 
@@ -141,24 +145,12 @@ export default {
       #first {
         visibility: hidden;
       }
-      #btm_btns {
+      #buttons {
         display: flex;
         flex-direction: column;
         width: 60%;
         font-size: 0.5em;
         margin: 10px 0px 5px 0px;
-      }
-    }
-    #rightbox {
-      position: fixed;
-      bottom: 0;
-      display: flex;
-      flex-direction: row;
-
-      a {
-        margin: 0 0.2em 0 0.2em;
-        padding: 0.2em;
-        font-size: 1em;
       }
     }
   }
