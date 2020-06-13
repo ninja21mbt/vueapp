@@ -1,30 +1,31 @@
 <template>
   <div id="header">
-    <img id="rotatinggif" src="../assets/headerassets/headergif_drehend.gif" />
+    <!-- <img id="rotatinggif" src="../assets/headerassets/headergif_drehend.gif" /> -->
     <div id="rightbox">
-      <div id="constructionbox">
+      <!-- <div id="constructionbox">
         <img src="../assets/headerassets/underconstruction.gif" />
         <img src="../assets/headerassets/underconstruction.gif" />
       </div>
       <div id="gifbox">
         <img src="../assets/headerassets/nothingisperfect.gif" />
         <img src="../assets/headerassets/visual.gif" />
-      </div>
-      <div id="buttons">
+      </div> -->
+     
+    </div>
+     <div id="buttons">
         <router-link to="/work">
-          <img src="../assets/headerassets/EVERYTHING.png" alt="button link to everything" />
+          <img src="../assets/headerassets/EVERYTHING2.png" alt="button link to everything" />
         </router-link>
         <router-link to="/motion">
-          <img src="../assets/headerassets/CASES.png" alt="button link to cases" />
+          <img src="../assets/headerassets/Cases2.png" alt="button link to cases" />
         </router-link>
         <router-link to="/work">
-          <img src="../assets/headerassets/ME.png" alt="button link to me" />
+          <img src="../assets/headerassets/ME2.png" alt="button link to me" />
         </router-link>
         <router-link to="/references">
-          <img src="../assets/headerassets/SHOP.png" alt="button link to shop" />
+          <img src="../assets/headerassets/SHOP2.png" alt="button link to shop" />
         </router-link>
       </div>
-    </div>
   </div>
 </template>
 
@@ -38,7 +39,7 @@ export default {
 #header {
   width: 90%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   margin-bottom: 3%;
   padding: 2% 5% 0% 5%;
@@ -71,12 +72,15 @@ export default {
         width: 30%;
       }
     }
-    #buttons {
+    
+  }
+  #buttons {
       width: 100%;
       display: flex;
       flex-flow: row nowrap;
       justify-content: center;
       align-content: center;
+      margin-bottom: 25px;
 
       a {
         box-shadow: 
@@ -89,11 +93,11 @@ export default {
         font-size: 1.2vw;
         cursor: pointer;
         text-align: center;
-        flex: 1;
+        // flex: 1;
         border-radius: 15px;
 
         &:hover{
-          box-shadow: 
+        box-shadow: 
         10px 10px 25px #323439,
         inset -10px -10px 25px #323439,
         -10px -10px 25px #0B0C0E,
@@ -102,16 +106,24 @@ export default {
         }
 
         img {
-          height: 15px;
-          padding: 10px;
+          height: 16px;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          padding-left: 18px;
+          padding-right: 18px;
+          filter:brightness(50%);
+
+          &:hover{
+            filter:brightness(100%);
+          }
         }
 
         &:first-child {
-          flex: 2;
+          // flex: 2;
+          margin-right: 5%;
         }
       }
     }
-  }
 }
 
 @media only screen and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
