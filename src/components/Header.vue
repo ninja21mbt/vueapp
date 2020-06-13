@@ -46,7 +46,8 @@ export default {
   position: sticky;
   top: 0;
   background-color: #1b1d23;
-  box-shadow: 0 15px 15px 0 #0b0d0f;
+  box-shadow:       0  12px 15px 0 #0b0d0f,
+              inset 0 -10px 15px 0 #0b0d0f;
 
   #rotatinggif {
     width: 18%;
@@ -80,7 +81,7 @@ export default {
       flex-flow: row nowrap;
       justify-content: center;
       align-content: center;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
 
       a {
         box-shadow: 
