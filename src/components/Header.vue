@@ -40,8 +40,8 @@ export default {
   padding: 2% 5% 0% 5%;
   position: sticky;
   top: 0;
-  background-color: black;
-  box-shadow: 0 10px 2px -2px black;
+  background-color: #1B1D23;
+  box-shadow: 0 15px 15px 0 black;
 
   #rotatinggif {
     width: 18%;
@@ -50,7 +50,7 @@ export default {
     box-shadow: 0px 0px 0px transparent;
     text-shadow: 0px 0px 0px transparent;
     border: 2px solid #fff;
-    background-color: black;
+    background-color: #1B1D23;
     color: #fff;
     margin-top: 2px;
     margin-bottom: 8px;
