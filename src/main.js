@@ -4,7 +4,7 @@ import App from './App.vue'
 import home from './components/Home.vue'
 import start from './components/Start.vue'
 import references from './components/References.vue'
-import visual from './components/Visual.vue'
+import cases from './components/Cases.vue'
 import contact from './components/Contact.vue'
 
 
@@ -16,7 +16,7 @@ const routes =  [
     {path: "/", component: start},
     {path: "/work", component: home},
     {path: "/references", component: references},
-    {path: "/motion", component: visual},
+    {path: "/cases", component: cases},
     {path: "/contact", component: contact},
   ]
 

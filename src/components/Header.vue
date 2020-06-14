@@ -18,7 +18,7 @@
         <router-link to="/work">
           <img src="../assets/headerassets/EVERYTHING2.png" alt="button link to everything" />
         </router-link>
-        <router-link to="/motion">
+        <router-link to="/cases">
           <img src="../assets/headerassets/Cases2.png" alt="button link to cases" />
         </router-link>
         <router-link to="/work">
@@ -50,6 +50,8 @@ export default {
   background-color: #1b1d23;
   box-shadow:       0  12px 15px 0 #0b0d0f,
               inset 0 -10px 15px 0 #0b0d0f;
+  z-index: 100;
+              
 
 
   // #rightbox {
@@ -83,6 +85,14 @@ export default {
 
     #lexgif{
       width: 300px;
+      padding: 12px;
+      border-radius: 3px;
+      //background-image: linear-gradient(30deg, blue, pink);
+      box-shadow: 
+        inset 10px 10px 25px #0B0C0E,
+        -10px -10px 25px #323439,
+        10px 10px 25px #0B0C0E,
+        inset 10px 10px 25px #323439;
     }
   }
 
