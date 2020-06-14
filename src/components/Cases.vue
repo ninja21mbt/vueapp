@@ -47,10 +47,6 @@ export default {
   justify-content: center;
   flex-direction: column;
 
-  header{
-    z-index: 100;
-  }
-
   #wrapper{
     display: flex;
     flex-direction: row;
@@ -58,7 +54,6 @@ export default {
     flex-wrap:wrap;
     width: 90%;
     margin-top: 5em;
-    z-index: 50;
 
     .case{
       background-color: white;
