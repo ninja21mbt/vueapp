@@ -123,6 +123,8 @@ export default {
         text-align: center;
         // flex: 1;
         border-radius: 15px;
+        transition-property: all;
+        transition-duration: 0.3s;
 
         &:hover{
         box-shadow: 
